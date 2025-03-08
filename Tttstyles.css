@@ -1,0 +1,52 @@
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    position: relative;
+}
+
+#message {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.x-cell::before,
+.x-cell::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 5px;
+    background-color: black;
+}
+
+.x-cell::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.x-cell::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.o-cell::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
